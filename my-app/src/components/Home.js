@@ -3,17 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { Container, Grid, TextField, Button } from "@mui/material";
 
 const Home = () => {
-  const navigate = useNavigate();
   const [loginSuccess, setLoginSuccess] = useState(false); 
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault(); 
     setLoginSuccess(true);
-  };
-
-  const handleBack = () => {
-    console.log("Navigating back to previous page...");
-    navigate(-1); 
+    navigate('/mainpage'); 
   };
 
   return (
@@ -44,18 +40,10 @@ const Home = () => {
             </Grid>
           </Grid>
         </form>
-
-        {loginSuccess && (
-          <div>
-            <h2 style={{ color: "green" }}>Login successful!</h2>
-            <Button variant="outlined"  onClick={handleBack}>
-              Back
-            </Button>
-          </div>
-        )}
       </Container>
     </div>
   );
 };
 
 export default Home;
+

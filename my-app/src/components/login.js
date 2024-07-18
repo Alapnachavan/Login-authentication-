@@ -11,6 +11,7 @@ const Login = () => {
     email: "",
     password: "",
     showPassword: false,
+    // showpassword :true
   });
   const [loggedIn, setLoggedIn] = useState(false); 
   const navigate = useNavigate();
@@ -53,12 +54,12 @@ const Login = () => {
     <div style={{ background: '#f0f2f5', height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <Container maxWidth="xs">
         <Paper elevation={3} style={{ padding: 20, textAlign: 'center' }}>
-          <Typography variant="h5" component="h1" gutterBottom>
+          <Typography variant="h4"  gutterBottom>
             Login
           </Typography>
           <h4>Already have an account?</h4>
           <Button fullWidth variant="contained" color="secondary" onClick={handleSignInWithGoogle}>
-            Sign in with Google
+          Continue with Google
           </Button>
           <h3>OR</h3>
           <Grid container direction="column" spacing={2}>
@@ -118,7 +119,10 @@ const Login = () => {
               </p>
             </Grid>
             <Grid item>
-              For any issues or assistance, email team2002@gmail.com
+
+              <Typography>
+                For any issues or assistance <a href="mailto:alpanachavan@navgurukul.org" style={{ color: 'blue', textDecoration: 'underline', cursor: 'pointer' }}>alpanachavan@navgurukul.org</a>
+              </Typography>
             </Grid>
           </Grid>
         </Paper>

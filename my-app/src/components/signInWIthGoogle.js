@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { auth, provider } from "./firebase.js";
 import { signInWithPopup } from "firebase/auth";
-// import Home from "./Home";
+
 
 function SignInWithGoogle() {
   const [value, setValue] = useState('');
